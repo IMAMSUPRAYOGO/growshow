@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { JetBrains_Mono, Inter } from 'next/font/google'
 
 const jetbrainsMono = JetBrains_Mono({ 
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   keywords: ['GrowShow', 'Private Server', 'Growtopia', 'Server 24/7'],
   authors: [{ name: 'SkyDev' }],
   creator: 'SkyDev',
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
+  metadataBase: new URL('https://growshow.online'),
   openGraph: {
     title: 'GrowShow Server - Premium Server Experience',
     description: 'Server private premium dengan uptime 24/7, daily giveaway, dan komunitas yang supportif',
@@ -32,7 +32,12 @@ export const metadata: Metadata = {
     title: 'GrowShow Server - Premium Server Experience',
     description: 'Server private premium dengan uptime 24/7, daily giveaway, dan komunitas yang supportif'
   },
-  manifest: '/manifest.json',
+  manifest: '/manifest.json'
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#0284c7'
 }
 
@@ -45,7 +50,6 @@ export default function RootLayout({
     <html lang="id" className={`${jetbrainsMono.variable} ${inter.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0284c7" />
       </head>
       <body className="font-sans bg-dark-metallic text-white antialiased overflow-x-hidden">
         <div className="min-h-screen relative">
