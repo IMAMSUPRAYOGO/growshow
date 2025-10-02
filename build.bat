@@ -24,9 +24,8 @@ if errorlevel 1 (
 echo.
 echo [3/3] Build completed successfully!
 echo.
-echo Your optimized website is ready in the 'dist' folder
-echo Upload the contents of 'dist' folder to your web server
-echo Or deploy to Vercel by pushing to GitHub
+echo Your optimized website is ready in the '.next' folder
+echo Deploy to Vercel by pushing to GitHub
 echo.
 
 pause
